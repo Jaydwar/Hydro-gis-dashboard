@@ -1,2 +1,10 @@
 streamlit
 folium
+streamlit
+pandas
+numpy
+folium
+streamlit-folium
+plotly
+streamlit-extras
+matplotlib
