@@ -160,14 +160,17 @@ def load_data():
     # Basin boundary
     file_path = os.path.join("Godavari_Geojon.geojson")
     try:
-        with open (file_path) as f:
+        # Correct use of os.path.join and open
+        file_path = os.path.join("Godavari_Geojon.geojson")  # or "data/Godavari_Geojon.geojson" if inside a folder
+        with open(file_path) as f:
             basin_boundary = json.load(f)
     except FileNotFoundError:
-        st.error("Godavari_Geojon.geojson not found! Please ensure the file is in the same directory.")
+        st.error("Godavari_Geojon.geojson not found! Please ensure the file is in the correct directory.")
         basin_boundary = None
 
     return discharge_df, cross_section_df, basin_boundary
 
+# Load the data
 df, cross_section_df, basin_boundary = load_data()
 
 # ------------------- SIDEBAR -------------------
