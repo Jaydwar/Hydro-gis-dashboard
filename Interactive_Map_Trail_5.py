@@ -159,7 +159,7 @@ def load_data():
 
     # Basin boundary
     try:
-        with open(Godavari_Geojon.geojson") as f:
+        with open os.path.join(Godavari_Geojon.geojson") as f:
             basin_boundary = json.load(f)
     except FileNotFoundError:
         st.error("Godavari_Geojon.geojson not found! Please ensure the file is in the same directory.")
