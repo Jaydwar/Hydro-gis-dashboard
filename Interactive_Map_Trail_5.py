@@ -158,7 +158,7 @@ def load_data():
     } for year, rd, elev in polavaram_data])
 
     # Basin boundary
-    file_path = "Godavari_Geojon.geojson"
+    file_path = os.path.join("Hydro-gis-dashboard", "Godavari_Geojon.geojson"
     try:
         # Correct use of os.path.join and open
         file_path = os.path.join("Godavari_Geojon.geojson")  # or "data/Godavari_Geojon.geojson" if inside a folder
