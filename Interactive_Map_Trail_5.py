@@ -158,8 +158,9 @@ def load_data():
     } for year, rd, elev in polavaram_data])
 
     # Basin boundary
+    file_path = os.path.join("Godavari_Geojon.geojson")
     try:
-        with open os.path.join(Godavari_Geojon.geojson") as f:
+        with open (file_path) as f:
             basin_boundary = json.load(f)
     except FileNotFoundError:
         st.error("Godavari_Geojon.geojson not found! Please ensure the file is in the same directory.")
